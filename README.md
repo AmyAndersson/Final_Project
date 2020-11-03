@@ -14,3 +14,17 @@ Thursday 5th Nov: Have SQL database setup, html pages complete.
 Saturday 7th Nov: Reasses timeframe. 
 
 
+
+## work flow: 
+
+collect data 
+clean data 
+bootstrap sampling 
+create model 
+save model 
+create flask app 
+user input from website
+collect data from user 
+run model prediction 
+return a yay or nah result box 
+
