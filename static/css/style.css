@@ -70,7 +70,7 @@
 }
 
 .text1 {
-  color: rgb(26, 40, 43)
+  color: rgb(144, 226, 226);
 }
 
 .box_r {
@@ -111,14 +111,19 @@
 
 /* comparison page */ 
 .box_comp {
-  height: 800px;
+  height: 1000px;
+  width: 2500px;
   padding: 50px;
   margin-bottom: 20px;
-  margin-top:20px;
-  margin-left:20px; 
+  margin-top:50px;
+  margin-left:200px; 
   margin-right:20px;
-  color:  rgb(56, 160, 179);
-  background: white;
+  color:  rgb(144, 226, 226);
+  background: #01415C;
+  opacity: .7;
+  outline-color: turquoise;
+  outline-width: 10px;
+  overflow: scroll;
 }
 
 .column_comp {
@@ -148,8 +153,8 @@
   margin-right:0 px;
   padding: 0px;}
 
-.box_data {
-  height: 27200px; 
+.button_results {
+  height: 200px; 
   padding: 50px;
   margin-bottom: 50px;
   margin-top:10px;
@@ -157,6 +162,8 @@
   margin-right:50px;
   color:  rgb(56, 160, 179);
   background: white;
+  width: 80%;
+  text-align:center;
 
 }
 
@@ -245,6 +252,10 @@
       margin-top:20px;
       margin-left:20px; 
       margin-right:20px;
-      color:  rgb(56, 160, 179);
-      background: white;
+      color:  rgb(144, 226, 226);
+      background: #01415C;
+      opacity: .7;
+      outline-color: turquoise;
+      outline-width: 10px;
+      overflow: scroll;
     }
