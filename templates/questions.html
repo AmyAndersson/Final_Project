@@ -54,76 +54,88 @@
 
       </style>
         <div class="col-md-12 col-sm-12">  
-        
+   
           <div class="row">
-            <div class="box_comp">         
+            <div class="box_comp">   
               <h1> Emplyer Questionaire</h1>
+
               <p class="text1">Employee Age</p>
-              <!-- <select id="selDataset" onchange="age(this.value)"></select> -->
+              <section>
+                <div class="row">
+                  <div class="form-group">
+
+                    <input type="text" class="form-control" id="formGroupExampleInput"  placeholder="Age" >
+
+                  </div>
+                </div>
+              </section>
 
               <hr>
               <p class="text1">How many other children does your employee already have?</p>
-                 <select multiple class="form-control" id="children">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  </select> 
-
+              <section>
+                <div class="row">
+                  <div class="col-lg-6 d-flex justify-content-center text-center">
+                    <select id="selNumKids" ></select>
+                  </div>
+                </div>
+              </section>
                 <hr>
 
               <p class="text1">Highest level of education?</p>
-              <select multiple class="form-control" id="exampleFormControlSelect2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+              <section>
+                <div class="row">
+                  <div class="col-lg-6 d-flex justify-content-center text-center">
+                    <select id="education" ></select>
+                  </div>
+                </div>
+              </section>
               <hr>
               <p class="text1">Level of employment before birth of first child?</p>
-              <select multiple class="form-control" id="exampleFormControlSelect2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+              <section>
+                <div class="row">
+                  <div class="col-lg-6 d-flex justify-content-center text-center">
+                    <select id="empLevel" ></select>
+                  </div>
+                </div>
+              </section>
               <hr>
-              <p class="text1">Click a graph for more info</p>
-              <select multiple class="form-control" id="exampleFormControlSelect2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+              <p class="text1">Partnered status</p>
+              <section>
+                <div class="row">
+                  <div class="col-lg-6 d-flex justify-content-center text-center">
+                    <select id="partner" ></select>
+                  </div>
+                </div>
+              </section>
               <hr>
-              <p class="text1">Click a graph for more info</p>
-              <select multiple class="form-control" id="exampleFormControlSelect2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+              <p class="text1">Will you provide maternity leave?</p>
+              <section>
+                <div class="row">
+                  <div class="col-lg-6 d-flex justify-content-center text-center">
+                    <select id="matleave" ></select>
+                  </div>
+                </div>
+              </section>
               <hr>
-              <p class="text1">Click a graph for more info</p>
-              <select multiple class="form-control" id="exampleFormControlSelect2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+              <p class="text1">Is your employee eligable for CSS(Child Care Subsidy)</p>
+              <section>
+                <div class="row">
+                  <div class="col-lg-6 d-flex justify-content-center text-center">
+                    <select id="cssElig" ></select>
+                  </div>
+                </div>
+              </section>
               <hr>
-              <p class="text1">Click a graph for more info</p>
+              <p class="text1">Does your employee have unpaid help?</p>
+              <section>
+                <div class="row">
+                  <div class="col-lg-6 d-flex justify-content-center text-center">
+                    <select id="help" ></select>
+                  </div>
+                </div>
+              </section>
               <hr>
-              <p class="text1">Click a graph for more info</p>
-              <hr>
-              <p class="text1">Click a graph for more info</p>
-              <hr>
+
             </div>
           </div>
           </div>
@@ -132,13 +144,13 @@
           
       <div class="col-md-12 col-sm-12">  
         <div class="row">
-          <p><a class="btn btn-primary btn-lg btn-block" href="#####" role="button">Will she return?</a></p>
-        
+          <p><a class="btn btn-primary btn-lg btn-block" id="clicked" role="button">Will she return?</a></p>
         
 
         </div>
           <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="../static/js/main.js"></script>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
