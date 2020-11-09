@@ -111,7 +111,7 @@ unpaid_help.forEach((hel) => {
 
 
 
-var button= d3.select("#clicked");
+
 
 
 
@@ -214,8 +214,8 @@ switch (Edu){
     break; 
   }
 
-  console.log(Edu); 
-  console.log(High_School, Masters, none, Uni)
+  console.log(Emp); 
+  console.log(unemployed, casual, part_time, full_time)
 
   // partnered
   var DDpar = d3.select("#partner");
@@ -234,6 +234,9 @@ switch (Edu){
   
     break; 
    }
+
+   console.log(Par); 
+   console.log(Single, Partnered)
 
 
    // mat leave eligability
@@ -264,6 +267,8 @@ switch (Edu){
     break; 
    }
 
+   console.log(Mat); 
+   console.log(None, Yes_paying, Yes_unpaid)
 
    // css eligability
 
@@ -285,12 +290,14 @@ switch (Edu){
 
    }
 
+   console.log(Css); 
+   console.log(Yes, No)
    //help 
 
     var DDhel = d3.select("#help");
     Help = DDhel.node().value;
 
-   switch (hel){
+   switch (Help){
     case "Yes-Scheduled":
       Yes = 1,
       No = 0
@@ -309,12 +316,15 @@ switch (Edu){
   
     break; 
 
-
-}
-
+}; 
 
 
+console.log(Help); 
+console.log(Yes, No)
+
+}; 
 
 
+var button= d3.select("#clicked");
 
 button.on("click", optionChanged); 
