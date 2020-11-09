@@ -1,4 +1,8 @@
-from flask import Flask, render_template, redirect, jsonify
+from flask import Flask, render_template, redirect, jsonify, request
+import requests
+from bs4 import BeautifulSoup as bs
+import function_list
+
 # from flask_pymongo import PyMongo
 # import scrape_mars
 
@@ -21,9 +25,17 @@ def home():
 
 # Route that will trigger the scrape function
 @app.route("/questions.html")
-def test():
+def questions():
 
     return render_template("questions.html")
+
+
+@app.route("/test" , methods=['GET', 'POST'])
+def test():
+    
+
+    return render_template("questions_copy.html")
+
 
 
 if __name__ == "__main__":

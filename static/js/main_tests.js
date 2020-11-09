@@ -1,27 +1,10 @@
 
-
-// var location
-
-// var locationList = ["ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"]
-
-// Populate dropbox with ID Values - ID Values come from Location List
-// locationList.forEach((location) => {
-//    var dropdownMenu = d3.select("#selDataset");
-//    var newoption = dropdownMenu.append("option");
-//    newoption.attr("value", location);
-//    newoption.text(location);
-//    selectedState = dropdownMenu.node().value;
-// }); 
-
-
 // Q1: AGE 
 
 var age_input = d3.select("#formGroupExampleInput")
 var age = age_input.property('value');
 
-function Age(age){
-console.log(age)
-}
+
 
 // how many children 
 
@@ -29,19 +12,14 @@ var numkids = ["1", "2", "3", "4", ">4"]
 
 // Populate dropbox with ID Values - ID Values come from Location List
 numkids.forEach((num) => {
-   var dropdownMenu = d3.select("#selNumKids");
-   var newoption = dropdownMenu.append("option");
+   var DDkids = d3.select("#selNumKids");
+   var newoption = DDkids.append("option");
    newoption.attr("value", num);
    newoption.text(num);
-   NumofKids = dropdownMenu.node().value;
+   NumofKids = DDkids.node().value;
 }); 
 
-//number of kids function 
-function kids(NumofKids) {
-  console.log(NumofKids);
 
-
-};
 
 // highest level of education 
 
@@ -49,18 +27,116 @@ var level_edu = ["none", "High School diploma", "Tertiary education", "Master's 
 
 // Populate dropbox with ID Values - ID Values come from Location List
 level_edu.forEach((edu) => {
-   var dropdownMenu = d3.select("#education");
-   var newoption = dropdownMenu.append("option");
+   var DDedu = d3.select("#education");
+   var newoption = DDedu.append("option");
    newoption.attr("value", edu);
    newoption.text(edu);
-   Edu = dropdownMenu.node().value;
+   Edu = DDedu.node().value;
 }); 
 
-//number of kids function 
-function Education(Edu) {
-  console.log(Edu);
 
-  switch (Edu){
+
+
+//level of employment before first kids
+
+var prekidEmp = ["unemployed", "Casual", "Part-time", "Full-time"]
+
+// Populate dropbox with ID Values - ID Values come from Location List
+prekidEmp.forEach((emp) => {
+   var DDemp = d3.select("#empLevel");
+   var newoption = DDemp.append("option");
+   newoption.attr("value", emp);
+   newoption.text(emp);
+   Emp = DDemp.node().value;
+}); 
+
+
+
+//partnered 
+
+var partnered = ["Single", "Partnered"]
+
+// Populate dropbox with ID Values - ID Values come from Location List
+partnered.forEach((par) => {
+   var DDpar = d3.select("#partner");
+   var newoption = DDpar.append("option");
+   newoption.attr("value", par);
+   newoption.text(par);
+   Par = DDpar.node().value;
+}); 
+
+
+
+//Maternity leave eligability 
+
+var MatLeav = ["None", "Yes - and we are paying!", "Yes - but unpaid"]
+
+// Populate dropbox with ID Values - ID Values come from Location List
+MatLeav.forEach((mat) => {
+   var DDmat = d3.select("#matleave");
+   var newoption = DDmat.append("option");
+   newoption.attr("value", mat);
+   newoption.text(mat);
+   Mat = DDmat.node().value;
+}); 
+
+
+
+//Maternity leave eligability 
+
+var css_func = ["Yes", "No"]
+
+// Populate dropbox with ID Values - ID Values come from Location List
+css_func.forEach((css) => {
+   var DDcss = d3.select("#cssElig");
+   var newoption = DDcss.append("option");
+   newoption.attr("value", css);
+   newoption.text(css);
+   Css = DDcss.node().value;
+}); 
+
+//unpaid help  
+
+var unpaid_help = ["Yes-Scheduled", "Yes- As needed", "No"]
+
+// Populate dropbox with ID Values - ID Values come from Location List
+unpaid_help.forEach((hel) => {
+   var DDhel = d3.select("#help");
+   var newoption = DDhel.append("option");
+   newoption.attr("value", hel);
+   newoption.text(hel);
+   Help = DDhel.node().value;
+}); 
+
+
+
+
+
+
+
+
+function optionChanged() {
+  
+
+  // Age 
+var age_input = d3.select("input")
+var age = age_input.property('value');
+
+
+// Number of kids 
+var DDkids = d3.select("#selNumKids");
+
+NumofKids = DDkids.node().value;
+
+console.log(age, NumofKids); 
+
+
+// level of education
+
+var DDedu = d3.select("#education");
+Edu = DDedu.node().value;
+
+switch (Edu){
     case "none":
       none = 1,
       High_School = 0,
@@ -95,29 +171,16 @@ function Education(Edu) {
 
   }
 
-  console.log(none, High_School, Uni, Masters)
-};
+  console.log(Edu); 
+  console.log(High_School, Masters, none, Uni)
 
 
 
-//level of employment before first kids
+  //level of employment before first kids
+  var DDemp = d3.select("#empLevel");
+  Emp = DDemp.node().value;
 
-var prekidEmp = ["unemployed", "Casual", "Part-time", "Full-time"]
-
-// Populate dropbox with ID Values - ID Values come from Location List
-prekidEmp.forEach((emp) => {
-   var dropdownMenu = d3.select("#empLevel");
-   var newoption = dropdownMenu.append("option");
-   newoption.attr("value", emp);
-   newoption.text(emp);
-   Emp = dropdownMenu.node().value;
-}); 
-
-//number of kids function 
-function emplLevel(Emp) {
-  console.log(Emp);
-
-  switch (Emp){
+    switch (Emp){
     case "unemployed":
       unemployed = 1,
       casual = 0,
@@ -151,27 +214,14 @@ function emplLevel(Emp) {
     break; 
   }
 
+  console.log(Emp); 
+  console.log(unemployed, casual, part_time, full_time)
 
-};
+  // partnered
+  var DDpar = d3.select("#partner");
+  Par = DDpar.node().value;
 
-//partnered 
-
-var partnered = ["Single", "Partnered"]
-
-// Populate dropbox with ID Values - ID Values come from Location List
-partnered.forEach((par) => {
-   var dropdownMenu = d3.select("#partner");
-   var newoption = dropdownMenu.append("option");
-   newoption.attr("value", par);
-   newoption.text(par);
-   Par = dropdownMenu.node().value;
-}); 
-
-//number of kids function 
-function partner(Par) {
-  console.log(Par);
-
-  switch (Par){
+    switch (Par){
     case "Single":
       Single = 1,
       Partnered = 0
@@ -184,26 +234,17 @@ function partner(Par) {
   
     break; 
    }
-};
 
-//Maternity leave eligability 
+   console.log(Par); 
+   console.log(Single, Partnered)
 
-var MatLeav = ["None", "Yes - and we are paying!", "Yes - but unpaid"]
 
-// Populate dropbox with ID Values - ID Values come from Location List
-MatLeav.forEach((mat) => {
-   var dropdownMenu = d3.select("#matleave");
-   var newoption = dropdownMenu.append("option");
-   newoption.attr("value", mat);
-   newoption.text(mat);
-   Mat = dropdownMenu.node().value;
-}); 
+   // mat leave eligability
+   var DDmat = d3.select("#matleave");
+   Mat = DDmat.node().value;
 
-//number of kids function 
-function MatLeave(Mat) {
-  console.log(Mat);
 
-  switch (Mat){
+     switch (Mat){
     case "None":
       None = 1,
       Yes_paying = 0,
@@ -225,24 +266,14 @@ function MatLeave(Mat) {
   
     break; 
    }
-};
 
-//Maternity leave eligability 
+   console.log(Mat); 
+   console.log(None, Yes_paying, Yes_unpaid)
 
-var css_func = ["Yes", "No"]
+   // css eligability
 
-// Populate dropbox with ID Values - ID Values come from Location List
-css_func.forEach((css) => {
-   var dropdownMenu = d3.select("#cssElig");
-   var newoption = dropdownMenu.append("option");
-   newoption.attr("value", css);
-   newoption.text(css);
-   Css = dropdownMenu.node().value;
-}); 
-
-//number of kids function 
-function CssFunc(Css) {
-  console.log(Css);
+   var DDcss = d3.select("#cssElig");
+   Css = DDcss.node().value;
 
   switch (Css){
     case "Yes":
@@ -258,26 +289,15 @@ function CssFunc(Css) {
     break; 
 
    }
-};
 
-//unpaid help  
+   console.log(Css); 
+   console.log(Yes, No)
+   //help 
 
-var unpaid_help = ["Yes-Scheduled", "Yes- As needed", "No"]
+    var DDhel = d3.select("#help");
+    Help = DDhel.node().value;
 
-// Populate dropbox with ID Values - ID Values come from Location List
-unpaid_help.forEach((hel) => {
-   var dropdownMenu = d3.select("#help");
-   var newoption = dropdownMenu.append("option");
-   newoption.attr("value", hel);
-   newoption.text(hel);
-   Help = dropdownMenu.node().value;
-}); 
-
-//number of kids function 
-function help(hel) {
-  console.log(hel);
-
-  switch (hel){
+   switch (Help){
     case "Yes-Scheduled":
       Yes = 1,
       No = 0
@@ -296,7 +316,41 @@ function help(hel) {
   
     break; 
 
+}; 
 
+
+console.log(Help); 
+console.log(Yes, No)
+
+
+
+// creating a json
+
+const fs = require('fs');
+
+
+var results = { 
+  R_age: age,
+  R_NumofKids: NumofKids 
+  // gender: 'Male',
+  // department: 'English',
+  // car: 'Honda' 
 };
+ 
+data = JSON.stringify(results);
+fs.writeFileSync('results.json', data) 
+
+//href = "answers.html"
+
+
+
+ 
+
+ 
 
 }; 
+
+
+var button= d3.select("#clicked");
+
+button.on("click", optionChanged); 

@@ -322,6 +322,32 @@ switch (Edu){
 console.log(Help); 
 console.log(Yes, No)
 
+
+
+// creating a json
+
+const fs = require('fs');
+
+
+var results = { 
+  R_age: age,
+  R_NumofKids: NumofKids 
+  // gender: 'Male',
+  // department: 'English',
+  // car: 'Honda' 
+};
+ 
+data = JSON.stringify(results);
+fs.writeFileSync('results.json', data) 
+
+//href = "answers.html"
+
+
+
+ 
+
+ 
+
 }; 
 
 

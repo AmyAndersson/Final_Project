@@ -36,11 +36,11 @@
 
 
 .answerbox{
-  height: 600px;
-  width: 2500px;
+  height: 400px;
+  width: 1000px;
   padding: 50px;
-  margin-bottom: 20px;
-  margin-top:50px;
+  margin-bottom: 200px;
+  margin-top:200px;
   margin-left:200px; 
   margin-right:200px;
   color:  rgb(144, 226, 226);
@@ -49,6 +49,7 @@
   outline-color: turquoise;
   outline-width: 10px;
   font-size: xx-large;
+  text-align: center;
 
 }
 
