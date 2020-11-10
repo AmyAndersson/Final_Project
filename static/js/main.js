@@ -323,24 +323,22 @@ console.log(Help);
 console.log(Yes, No)
 
 
-
-// creating a json
-
-const fs = require('fs');
+var results = ( `${age}/${NumofKids}/${Edu}/${Emp}/${Par}/${Mat}/${Css}/${Help}`)
 
 
-var results = { 
-  R_age: age,
-  R_NumofKids: NumofKids 
-  // gender: 'Male',
-  // department: 'English',
-  // car: 'Honda' 
+ 
+console.log(results)
+
+
+d3.select(".clicked").attr("href", `answers/${results}`).html;
+// Css = DDcss.node().value;
+
+console.log(text)
+ 
+
 };
  
-data = JSON.stringify(results);
-fs.writeFileSync('results.json', data) 
 
-//href = "answers.html"
 
 
 
@@ -348,7 +346,7 @@ fs.writeFileSync('results.json', data)
 
  
 
-}; 
+
 
 
 var button= d3.select("#clicked");

@@ -24,17 +24,20 @@ def home():
 
 
 # Route that will trigger the scrape function
-@app.route("/questions.html")
+@app.route("/questions")
 def questions():
 
     return render_template("questions.html")
 
 
-@app.route("/test" , methods=['GET', 'POST'])
-def test():
+@app.route("/answers/<age>/<NumofKids>/<Edu>/<Emp>/<Par>/<Mat>/<Css>/<Help>")
+def test(age, NumofKids, Edu, Emp, Par, Mat, Css, Help):
+    
+    return render_template("answers.html")
+
     
 
-    return render_template("questions_copy.html")
+
 
 
 

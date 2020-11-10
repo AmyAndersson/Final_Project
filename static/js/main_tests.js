@@ -1,6 +1,8 @@
 
 // Q1: AGE 
 
+const { Console } = require("console");
+
 var age_input = d3.select("#formGroupExampleInput")
 var age = age_input.property('value');
 
@@ -324,28 +326,11 @@ console.log(Yes, No)
 
 
 
-// creating a json
-
-const fs = require('fs');
-
-
-var results = { 
-  R_age: age,
-  R_NumofKids: NumofKids 
-  // gender: 'Male',
-  // department: 'English',
-  // car: 'Honda' 
-};
- 
-data = JSON.stringify(results);
-fs.writeFileSync('results.json', data) 
-
-//href = "answers.html"
-
+var results = "{age}/{NumofKids}/{Edu}/{Emp}/{Par}/{Mat}/{Css}/{Help}"
 
 
  
-
+Console.log(results)
  
 
 }; 
