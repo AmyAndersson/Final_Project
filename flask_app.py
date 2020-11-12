@@ -40,11 +40,15 @@ def questions():
     return render_template("questions.html")
 
 
-@app.route("/answers/<age>/<NumofKids>/<Edu>/<Emp>/<Par>/<Mat>/<Css>/<Help>")
+@app.route("/answers=<age>=<NumofKids>=<Edu>=<Emp>=<Par>=<Mat>=<Css>=<Help>")
 def Results(age, NumofKids, Edu, Emp, Par, Mat, Css, Help ):
+ 
+    # if NumofKids == ">4":
+    #     NumbofKids = 5
+    # else: 
+    #     NumofKids = NumbofKids
 
-
-# binary education  
+    # binary education  
     if Edu == "none" : 
         none = 1
         High_School = 0
@@ -69,7 +73,7 @@ def Results(age, NumofKids, Edu, Emp, Par, Mat, Css, Help ):
         Uni = 0
         Masters = 1
 
-# binary of employment status before first baby 
+    # binary of employment status before first baby 
 
     if Emp ==  "unemployed":
         unemployed = 1
@@ -95,7 +99,7 @@ def Results(age, NumofKids, Edu, Emp, Par, Mat, Css, Help ):
         part_time = 0
         full_time = 1
 
- # partnerd binary  
+    # partnerd binary  
 
     if  Par == "Single":
       Single = 1
@@ -105,7 +109,7 @@ def Results(age, NumofKids, Edu, Emp, Par, Mat, Css, Help ):
         Single = 1
         Partnered = 0
 
-# maternity eligabiluty binary
+    # maternity eligabiluty binary
 
     if Mat == "None":
         none_1 = 1
@@ -123,7 +127,7 @@ def Results(age, NumofKids, Edu, Emp, Par, Mat, Css, Help ):
         Yes_unpaid = 1
 
 
-# Css eligability binary
+    # Css eligability binary
 
     if Css == "Yes":
         css_Yes = 1
@@ -134,7 +138,7 @@ def Results(age, NumofKids, Edu, Emp, Par, Mat, Css, Help ):
         css_No = 1 
 
 
-# Help binary 
+    # Help binary 
     if Help == "No": 
         Hel_Yes_sc = 0
         Hel_Yes_need =0

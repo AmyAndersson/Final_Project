@@ -23,7 +23,7 @@
 
 .bg {
   /* The image used */
-  background-image: url("../static/images/face_background.jpg");
+  background-image: url("static/images/face_background.jpg");
 
   /* Full height */
   height: 100%;

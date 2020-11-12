@@ -323,14 +323,14 @@ console.log(Help);
 console.log(Yes, No)
 
 
-var results = ( `${age}/${NumofKids}/${Edu}/${Emp}/${Par}/${Mat}/${Css}/${Help}`)
+var results = ( `${age}=${NumofKids}=${Edu}=${Emp}=${Par}=${Mat}=${Css}=${Help}`)
 
 
  
 console.log(results)
 
 
-d3.select("#clicked").attr("href", `answers/${results}`).html;
+d3.select("#clicked").attr("href", `answers=${results}`).html;
 // Css = DDcss.node().value;
 
 console.log(text)
