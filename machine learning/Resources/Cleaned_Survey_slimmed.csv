@@ -32,9 +32,33 @@ ID,age,Num_kids,Education,pre_employment_Status,partnered,mat_leave,mat_leave_el
 47,45,2,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,Yes,No,Yes
 49,43,3,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,Yes,No,Yes
 50,30,1,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,Yes,Yes- As needed help,Yes
+51,30,2,Master's or Doctorate,Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes - Unpaid (excludes govt Maternity pay),Yes,Yes- As needed help,Yes
+52,54,2,Tertiary education ( University or TAFE or equivalent),Full time work,Single,No,No,Yes,No,Yes
+53,35,2,High School diploma,Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,Yes,No,Yes
+54,33,1,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,Yes,No,Yes
+55,54,2,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes - Unpaid (excludes govt Maternity pay),Yes,No,Yes
+56,34,2,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,Yes,Yes - Scheduled help,Yes
+59,30,3,Tertiary education ( University or TAFE or equivalent),Unemployed,"Partner ( Husband/Wife, De-facto partner)",No,Yes - Unpaid (excludes govt Maternity pay),Yes,No,Yes
+60,40,2,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,No,No,Yes- As needed help,Yes
+61,41,1,Master's or Doctorate,Full time work,Single,No,Yes - Unpaid (excludes govt Maternity pay),Yes,No,Yes
+62,37,2,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,No,No,Yes
 63,25,2,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes - Unpaid (excludes govt Maternity pay),Yes,No,No
+64,38,3,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes - Unpaid (excludes govt Maternity pay),No,Yes- As needed help,Yes
+65,44,2,Master's or Doctorate,Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes - Unpaid (excludes govt Maternity pay),Yes,No,Yes
+66,39,2,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes - Unpaid (excludes govt Maternity pay),Yes,No,Yes
+67,40,2,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,Yes,Yes - Scheduled help,Yes
+68,29,2,High School diploma,Full time work,"Partner ( Husband/Wife, De-facto partner)",No,No,Yes,No,Yes
 69,61,3,None,Full time work,"Partner ( Husband/Wife, De-facto partner)",No,No,No,No,No
+70,38,2,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes - Unpaid (excludes govt Maternity pay),No,No,Yes
+71,43,2,High School diploma,Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,Yes,No,Yes
+73,51,2,Master's or Doctorate,Full time work,Single,No,Yes- with some paid leave provided by Employer,No,No,Yes
+74,34,2,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,Yes,No,Yes
+75,42,2,High School diploma,Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,Yes,Yes - Scheduled help,Yes
+76,35,2,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,Yes,No,Yes
 77,50,3,High School diploma,Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes - Unpaid (excludes govt Maternity pay),No,No,No
+78,41,1,Tertiary education ( University or TAFE or equivalent),Full time work,Single,No,Yes- with some paid leave provided by Employer,Yes,No,Yes
+80,51,1,Tertiary education ( University or TAFE or equivalent),Part time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,Yes,Yes- As needed help,Yes
+81,53,2,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,No,No,Yes
 83,42,1,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,No,Yes,No,No
 96,32,2,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,No,Yes- As needed help,No
 112,36,2,Tertiary education ( University or TAFE or equivalent),Full time work,"Partner ( Husband/Wife, De-facto partner)",No,Yes- with some paid leave provided by Employer,No,No,No

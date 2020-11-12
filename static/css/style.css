@@ -6,15 +6,24 @@
 
 #box1 {
   color:magenta;
-  height: 50px;
+  height: 100px;
   padding: 10px;
   background:#01415C;
   font-weight: 500;
 }
 
+#box2 {
+  color:#01415C;
+  height: 50px;
+  padding: 10px;
+  background:magenta;
+  font-weight: 500;
+
+}
+
 .bg {
   /* The image used */
-  background-image: url("images/face_background.jpg");
+  background-image: url("../static/images/face_background.jpg");
 
   /* Full height */
   height: 100%;
@@ -34,6 +43,14 @@
 
 }
 
+#otherfonts {
+  font-style: normal;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 500;
+  font-size: large;
+  color: magenta;
+
+}
 
 .answerbox{
   height: 400px;
@@ -53,6 +70,22 @@
 
 }
 
+.visbox{
+  height: 800px;
+  /* width: 1000px;  */
+  padding: 50px;
+  margin-bottom: 200px;
+  margin-top:200px;
+  margin-left:200px; 
+  margin-right:200px;
+  color:  rgb(144, 226, 226);
+  background: #01415C;
+  opacity: .9;
+  outline-color: turquoise;
+  outline-width: 10px;
+  font-size: xx-large;
+  text-align: center;
+}
 
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
@@ -127,7 +160,7 @@
 
 /* comparison page */ 
 .box_comp {
-  height: 600px;
+  height: 1000px;
   width: 2500px;
   padding: 50px;
   margin-bottom: 20px;
@@ -140,6 +173,21 @@
   outline-color: turquoise;
   outline-width: 10px;
   overflow: scroll;
+}
+.box_comp2 {
+  height: 1000px;
+  width: 2500px;
+  padding: 50px;
+  margin-bottom: 20px;
+  margin-top:50px;
+  margin-left:200px; 
+  margin-right:200px;
+  color:  rgb(144, 226, 226);
+  background: #01415C;
+  opacity: .7;
+  outline-color: turquoise;
+  outline-width: 10px;
+
 }
 
 .column_comp {

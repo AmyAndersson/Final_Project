@@ -27,6 +27,13 @@ def home():
 
 
 # Route that will trigger the scrape function
+@app.route("/Visualisations.html")
+def Viz():
+
+    return render_template("Visualisations.html")
+
+
+    # Route that will trigger the scrape function
 @app.route("/questions.html")
 def questions():
 
@@ -34,7 +41,7 @@ def questions():
 
 
 @app.route("/answers/<age>/<NumofKids>/<Edu>/<Emp>/<Par>/<Mat>/<Css>/<Help>")
-def test(age, NumofKids, Edu, Emp, Par, Mat, Css, Help ):
+def Results(age, NumofKids, Edu, Emp, Par, Mat, Css, Help ):
 
 
 # binary education  
@@ -119,62 +126,74 @@ def test(age, NumofKids, Edu, Emp, Par, Mat, Css, Help ):
 # Css eligability binary
 
     if Css == "Yes":
-        Yes = 1
-        No = 0
+        css_Yes = 1
+        css_No = 0
     
-    if Css == "No": 
-        Yes = 0
-        No = 1 
+    elif Css == "No": 
+        css_Yes = 0
+        css_No = 1 
 
 
 # Help binary 
+    if Help == "No": 
+        Hel_Yes_sc = 0
+        Hel_Yes_need =0
+        Help_no = 1
     
-    if Help == "Yes-Scheduled":
+    elif Help == "Yes-Scheduled":
         Hel_Yes_sc = 1
         Hel_Yes_need =0
-        Hel_No = 0
+        Help_no = 0
     
-    elif Help == "Yes - As needed": 
+    elif Help == "Yes- As needed": 
         Hel_Yes_sc = 0
         Hel_Yes_need =1
-        Hel_No = 0
+        Help_no = 0
   
-    elif Help == "No": 
-        Hel_Yes_sc = 0
-        Hel_Yes_need =0
-        Hel_No = 1
 
 
+    print(Help_no)
 
 
     filename = 'Model.h5'
     loaded_model = pickle.load(open(filename, 'rb'))
 
 
-    new_value  = [30,2,0,0,0,1,0,0,0,1,0,1,0,0,1,1,0,0,0,1]
-    new_value = np.array(new_value)
+    response = [age, NumofKids, High_School,Masters, none, Uni, casual, full_time, part_time, unemployed, Partnered, Single, none_1, Yes_unpaid, Yes_paying, css_No, css_Yes, Help_no, Hel_Yes_sc, Hel_Yes_need ]
+   
+    results_list =[]
+
+    for item in response:
+        results_list.append(float(item))
+
+
+    new_value = np.array(results_list)
     new_value = np.expand_dims(new_value, 0)
     prediction = loaded_model.predict(new_value)
 
 
-    
+    if prediction == "Yes" : 
+        Content = "Yes!! Your hard working employee will return"
+    elif prediction =="No": 
+        Content = "No! Sorry, should have paid more. Have you considered birthday day off? "
+    else: 
+        Content = "Sorry, I don't know, I'm a good model - not a great model"
 
 
 
 
 
-    return (
-        # render_template("answers.html")
-        f"age : {age}<br/>"
-        f"Number of Kids : {NumofKids}<br/>"
-        f"{Edu}: none : {none}, high school diploma : {High_School}, Tertiary : {Uni}, Masters or Doctorate: {Masters}<br/>"
-        f"{Emp} : unemployed:{unemployed},  casual: {casual}, part_time: {part_time}, full_time: {full_time}<br/>"
-        f"{Par}: Single : {Single}, Partnered : {Partnered}<br/>"
-        f"{Mat}: none : {none_1}, Yes-Paying: {Yes_paying}, Yes-Unpaid: {Yes_unpaid}<br/>"
-        f"{Css}: yes : {Yes}, no: {No}<br/>"
-        f"{Help}: no : {Hel_No}, yes-scheduled: {Hel_Yes_sc}, yes - as needed : {Hel_Yes_sc}<br/>"
-        f" Will Your hard working and dedicated employee return?  {prediction}"
-    )
+    return render_template("answers.html", Content=Content)
+        # f"age : {age}<br/>"
+        # f"Number of Kids : {NumofKids}<br/>"
+        # f"{Edu}: none : {none}, high school diploma : {High_School}, Tertiary : {Uni}, Masters or Doctorate: {Masters}<br/>"
+        # f"{Emp} : unemployed:{unemployed},  casual: {casual}, part_time: {part_time}, full_time: {full_time}<br/>"
+        # f"{Par}: Single : {Single}, Partnered : {Partnered}<br/>"
+        # f"{Mat}: none : {none_1}, Yes-Paying: {Yes_paying}, Yes-Unpaid: {Yes_unpaid}<br/>"
+        # f"{Css}: yes : {css_Yes}, no: {css_No}<br/>"
+        # f"{Help}: no : {Help_no}, yes-scheduled: {Hel_Yes_sc}, yes - as needed : {Hel_Yes_need}<br/>"
+        # f" Will Your hard working and dedicated employee return?  {prediction}"
+
 
    
 
