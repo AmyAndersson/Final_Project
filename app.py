@@ -39,14 +39,18 @@ def questions():
 
     return render_template("questions.html")
 
+@app.route("/answers==<NumofKids>=<Edu>=<Emp>=<Par>=<Mat>=<Css>=<Help>")
+def error(NumofKids, Edu, Emp, Par, Mat, Css, Help ):
+
+    return render_template ("error.html")
 
 @app.route("/answers=<age>=<NumofKids>=<Edu>=<Emp>=<Par>=<Mat>=<Css>=<Help>")
 def Results(age, NumofKids, Edu, Emp, Par, Mat, Css, Help ):
  
-    # if NumofKids == ">4":
-    #     NumbofKids = 5
-    # else: 
-    #     NumofKids = NumbofKids
+    if NumofKids == ">4":
+        Numkids = 5
+    else: 
+        Numkids = NumofKids
 
     # binary education  
     if Edu == "none" : 
@@ -163,7 +167,7 @@ def Results(age, NumofKids, Edu, Emp, Par, Mat, Css, Help ):
     loaded_model = pickle.load(open(filename, 'rb'))
 
 
-    response = [age, NumofKids, High_School,Masters, none, Uni, casual, full_time, part_time, unemployed, Partnered, Single, none_1, Yes_unpaid, Yes_paying, css_No, css_Yes, Help_no, Hel_Yes_sc, Hel_Yes_need ]
+    response = [age, Numkids, High_School,Masters, none, Uni, casual, full_time, part_time, unemployed, Partnered, Single, none_1, Yes_unpaid, Yes_paying, css_No, css_Yes, Help_no, Hel_Yes_sc, Hel_Yes_need ]
    
     results_list =[]
 
