@@ -8,7 +8,7 @@ var age = age_input.property('value');
 
 // how many children 
 
-var numkids = ["1", "2", "3", "4", ">4"]
+var numkids = ["0", "1", "2", "3", ">3"]
 
 // Populate dropbox with ID Values - ID Values come from Location List
 numkids.forEach((num) => {

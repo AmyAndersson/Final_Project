@@ -47,10 +47,10 @@ def error(NumofKids, Edu, Emp, Par, Mat, Css, Help ):
 @app.route("/answers=<age>=<NumofKids>=<Edu>=<Emp>=<Par>=<Mat>=<Css>=<Help>")
 def Results(age, NumofKids, Edu, Emp, Par, Mat, Css, Help ):
  
-    if NumofKids == ">4":
-        Numkids = 5
+    if NumofKids == ">3":
+        Numkids = 4
     else: 
-        Numkids = NumofKids
+        Numkids = float(NumofKids) +1
 
     # binary education  
     if Edu == "none" : 
