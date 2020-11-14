@@ -183,7 +183,7 @@ def Results(age, NumofKids, Edu, Emp, Par, Mat, Css, Help ):
     if prediction == "Yes" : 
         Content = "Yes!! Your hard working employee will return"
     elif prediction =="No": 
-        Content = "No! Sorry, should have paid more. Have you considered birthday day off? "
+        Content = "No! Sorry. Have you considered birthday day off? "
     else: 
         Content = "Sorry, I don't know, I'm a good model - not a great model"
 
