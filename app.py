@@ -23,7 +23,11 @@ def home():
     # Return template and data
     return render_template("index.html")
 
-    
+@app.route("/project.html")
+def project():
+
+    return render_template("project.html")
+
 
 
 # Route that will trigger the scrape function
