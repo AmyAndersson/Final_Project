@@ -29,6 +29,11 @@ def project():
     return render_template("project.html")
 
 
+@app.route("/Machinelearning.html")
+def ML():
+
+    return render_template("Machinelearning.html")
+
 
 # Route that will trigger the scrape function
 @app.route("/Visualisations.html")
@@ -185,11 +190,11 @@ def Results(age, NumofKids, Edu, Emp, Par, Mat, Css, Help ):
 
 
     if prediction == "Yes" : 
-        Content = "Yes!! Your hard working employee will return"
+        Content = "Yes!! Your hard working employee will return."
     elif prediction =="No": 
         Content = "No! Sorry. Have you considered birthday day off? "
     else: 
-        Content = "Sorry, I don't know, I'm a good model - not a great model"
+        Content = "Sorry, I don't know, I'm a good model - not a great model."
 
 
 

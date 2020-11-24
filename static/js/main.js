@@ -340,15 +340,6 @@ console.log(text)
  
 
 
-
-
- 
-
- 
-
-
-
-
 var button= d3.select("#clicked");
 
 button.on("click", optionChanged); 
