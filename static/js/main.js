@@ -10,7 +10,7 @@ var age = age_input.property('value');
 
 var numkids = ["0", "1", "2", "3", ">3"]
 
-// Populate dropbox with ID Values - ID Values come from Location List
+// Populate dropbox with number of kids
 numkids.forEach((num) => {
    var DDkids = d3.select("#selNumKids");
    var newoption = DDkids.append("option");
@@ -25,7 +25,7 @@ numkids.forEach((num) => {
 
 var level_edu = ["none", "High School diploma", "Tertiary education", "Master's or Doctorate"]
 
-// Populate dropbox with ID Values - ID Values come from Location List
+// Populate dropbox highest education 
 level_edu.forEach((edu) => {
    var DDedu = d3.select("#education");
    var newoption = DDedu.append("option");
@@ -41,7 +41,7 @@ level_edu.forEach((edu) => {
 
 var prekidEmp = ["unemployed", "Casual", "Part-time", "Full-time"]
 
-// Populate dropbox with ID Values - ID Values come from Location List
+// Populate dropbox with level of employment 
 prekidEmp.forEach((emp) => {
    var DDemp = d3.select("#empLevel");
    var newoption = DDemp.append("option");
